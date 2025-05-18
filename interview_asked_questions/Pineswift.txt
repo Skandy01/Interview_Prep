@@ -1,0 +1,31 @@
+linux virtual memory system
+
+linux commands
+
+what is pod
+
+what is kubernetes and why it is used
+
+what is ci/cd pipelines
+
+SQL practice [where and having] -> 5th highest salary from employee table
+
+ourter join vs inner join./ Types of join.
+
+diff b/w where and having
+
+Deployment architecture
+
+difference between var and varchar
+
+nodes of k8s --> manage node
+
+permissions/file permissions in Linux
+
+diff. b/w ls and ls -lrt
+
+having can be used with aggregate fns only like group by and where can be used without aggregate funstions to filter in the table.
+
+In my workflow, CI/CD tools like Jenkins automate the build and testing of code. We package the app into Docker images using a Dockerfile, and then deploy these containers to Kubernetes clusters using deployment YAMLs. This ensures scalability, zero-downtime deployment, and faster delivery.
+
+CI/CD pipeline is an automated process that helps build, test, and deploy code faster and more reliably. I’ve worked on CI/CD using Jenkins and Docker, where code commits triggered automatic builds and container deployments into test environments.

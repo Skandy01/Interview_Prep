@@ -1,0 +1,15 @@
+1.  How we store terraform state file and what is it?
+2.  Terraform destroy.
+3.  what are the provider used in terraform
+4.  which module you worked in terraform
+5.  Do you know aobut private module.
+6.  what are the pre-requisite creating infra in terraform
+7.  Terraform workspace
+8.  what are the key concepts of terraform
+9.  if you are having the state file how can you lock that file.
+10. Docker, Kuberentes(Basic for now)
+11. kubernetes - state fullsit.
+12. demonsit
+13. secrets in cluster
+14. can you explain the CI part.
+15. which tool you use for CI.

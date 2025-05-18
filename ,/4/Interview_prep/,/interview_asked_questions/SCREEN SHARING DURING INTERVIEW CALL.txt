@@ -1,0 +1,26 @@
+1. cat log4j2.properties
+
+2. vi log4j2.properties
+
+3. cd /bhabya/documents
+
+4. cp log4j.properties log4j2.properties
+
+5. mv jms.proprties /bhabya/downloads
+
+6. grep IRIS
+
+7. pwd
+
+8. ls
+
+9. ls -lrt
+
+10. mkdir 
+
+
+SELECT * FROM EMPLOYEE WHERE 
+
+SELECT * FROM EMPLOYEE HAVING ID EQ 109
+
+SELECT * FROM EMPLOYEE HAVING NAME LIKE "Anja

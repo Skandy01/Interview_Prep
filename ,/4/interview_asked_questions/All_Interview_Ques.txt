@@ -1,0 +1,80 @@
+1.  How we store terraform state file and what is it?
+2.  Terraform destroy.
+3.  what are the provider used in terraform
+4.  which module you worked in terraform
+5.  Do you know aobut private module.
+6.  what are the pre-requisite creating infra in terraform
+7.  Terraform workspace
+8.  what are the key concepts of terraform
+9.  if you are having the state file how can you lock that file.
+10. Docker, Kuberentes(Basic for now)
+11. kubernetes - state fullsit.
+12. demonsit
+13. secrets in cluster
+14. can you explain the CI part.
+15. which tool you use for CI.
+
+linux virtual memory system
+
+linux commands
+
+what is pod
+
+what is kubernetes and why it is used
+
+what is ci/cd pipelines
+
+SQL practice [where and having] -> 5th highest salary from employee table
+
+ourter join vs inner join./ Types of join.
+
+diff b/w where and having
+
+Deployment architecture
+
+difference between var and varchar
+
+nodes of k8s --> manage node
+
+permissions/file permissions in Linux
+
+diff. b/w ls and ls -lrt
+
+
+Duration: 45 mins
+
+1. How the system was deployed before moving to cloud and after moving to the cloud?
+
+2. How we deploy an application on a server?
+
+3. how to write dockerfile?
+
+4. what is security incident?
+
+5. Types of security incident?
+
+6. While defining the stages of the pipeline in a multistage deployment, how can we specify that the third stage should be executed at 7 am in the morning?
+
+7. How we can ensure that data from our blob storage account can be there inside Azure SQL database?
+
+8. How can we secure the blob storage account?
+
+9. Two types of branching in GIT?
+
+10. How we can push a local image from our local directory to a private registry?
+
+11. How we can push a local image from our local directory to a Web App?
+
+12. How to export a visual from Grafana to a web app?
+
+13. How we can get the key of a blob storage account or cosmos DB in a variable which is declared in our configuration file?
+
+14. If we want to give access to a person to check the logs in a resource group them which level of access we will provide?
+
+15. How can we get the code from GIT while creating a pipeline using Azure DevOps?
+
+16. How we create CI/CD pipeline using Azure DevOps?
+
+17. How we create CI/CD pipeline using GitHub Actions?
+
+

@@ -1,0 +1,193 @@
+Here’s a list of **most commonly asked Terraform intrview questions 
+### Basic-Level Questions:
+1. What is Terraform?
+2. What are the key features of Terraform?
+3. Explain the difference between Terraform and other IaC tools like Ansible or CloudFormation.
+4. What are providers in Terraform?
+5. What is a Terraform module?
+6. *What is the purpose of terraform init, plan, apply, and destroy commands?*
+7. *What is a Terraform state file (terraform.tfstate)? Why is it important?*
+
+---
+
+### Intermediate-Level Questions:
+1. How do you manage sensitive data in Terraform?
+2. What is remote state and how is it managed in Terraform?
+3. Explain how Terraform handles dependencies between resources.
+4. *What is the use of terraform import?*
+5. How can you manage multiple environments (like dev, staging, prod) in Terraform?
+6. What are data sources in Terraform?
+7. *What is the difference between count, for_each, and dynamic blocks?*
+
+---
+
+### Advanced-Level Questions:
+1. How do you handle state locking in Terraform?
+2. What is the purpose of backends in Terraform?
+3. Explain Terraform Workspaces and their use cases.
+4. How do you use Terraform with CI/CD pipelines?
+5. What are some best practices when writing Terraform code?
+6. Have you used Terraform Cloud or Terraform Enterprise? What are the differences?
+7. How do you refactor large Terraform projects using modules?
+
+---
+
+### Scenario-Based Questions:
+1. What would you do if two developers try to apply Terraform at the same time?
+2. How would you roll back a failed Terraform deployment?
+3. You modified a resource manually in the cloud – what happens when you run Terraform again?
+4. How would you migrate existing infrastructure to Terraform?
+
+
+
+Terraform Core Concepts
+Q1: Terraform declarative hai ya imperative? Iska kya fayda hai?
+A: Terraform declarative hai — aap sirf "kya chahiye" batate hain, "kaise banana hai" nahi. Isse configuration simple hoti hai, aur Terraform automatically best path choose karta hai to reach desired state.
+
+Q2: Terraform state file kya hota hai? Iske bina kya ho sakta hai?
+A: Terraform state file (terraform.tfstate) me infrastructure ka actual current state store hota hai. Iske bina Terraform ko nahi pata hoga ki kya changes apply karne hain, aur woh har baar infrastructure ko naya banane ki koshish karega.
+
+Q3: Terraform plan aur apply me kya difference hai?
+A:
+
+terraform plan: Dry run, sirf dikhata hai kya hone wala hai.
+
+terraform apply: Actual infrastructure me changes karta hai.
+
+🗂 State Management
+Q4: State file secure kaise rakhen?
+A:
+
+Remote backends use karein (S3 + DynamoDB for locking, Azure Blob + state locking)
+
+encrypt = true option
+
+Access control via IAM
+
+Q5: Terraform Locking kya hota hai?
+A: Locking ensure karta hai ki ek hi time me sirf ek user state file modify kare. Jaise AWS me S3 + DynamoDB locking ya Azure me Blob lease-based locking.
+
+Q6: Terraform Refresh kya karta hai?
+A: terraform refresh cloud se current state fetch karke .tfstate ko update karta hai, bina apply kiye.
+
+📁 Provisioning and Modules
+Q7: Module reuse kaise karte hain?
+A: Modules infrastructure ko reusable banaate hain. Aap folder structure ya remote Git/s3 based modules ka use kar sakte hain.
+
+hcl
+Copy
+Edit
+module "network" {
+  source = "./modules/network"
+  vnet_name = "vnet-prod"
+}
+Q8: Module ke andar variables aur outputs kaise define karte hain?
+A:
+
+variables.tf me define
+
+outputs.tf me outputs specify
+
+Parent module me call aur receive
+
+Q9: Count aur for_each me kya difference hai?
+A:
+
+count: Index-based, list ke liye suitable
+
+for_each: Map ya set ke liye, named keys use karta hai (zyada readable)
+
+⚙ Advanced Scenarios
+Q10: Terraform import ka limitation kya hai?
+A:
+
+Sirf state me add karta hai, configuration file (.tf) auto-generate nahi hoti
+
+Har resource manually import karna padta hai
+
+Q11: Taint command kya karta hai?
+A:
+terraform taint <resource> resource ko forcefully destroy + recreate karta hai next apply me.
+
+Q12: Terraform me lifecycle rules kya hoti hain?
+A:
+
+hcl
+Copy
+Edit
+lifecycle {
+  prevent_destroy = true
+  ignore_changes  = [tags]
+  create_before_destroy = true
+}
+Yeh control dete hain ki resource kaise create/update/delete hoga.
+
+Q13: Data source kya hota hai?
+A:
+Data source se existing infra (jaise existing VPC ID) read-only mode me access karte hain:
+
+hcl
+Copy
+Edit
+data "aws_vpc" "existing" {
+  filter {
+    name = "tag:Name"
+    values = ["prod-vpc"]
+  }
+}
+🧠 Real-world and Troubleshooting
+Q14: Agar terraform apply fail ho jaye, toh kya hota hai?
+A:
+
+Jo steps complete hue, woh infra me exist karte hain
+
+State inconsistent ho sakti hai
+
+Manual fix ya terraform refresh helpful ho sakta hai
+
+Q15: Terraform drift kya hota hai?
+A:
+Infra me manual change karna (outside Terraform), jise TF state nahi jaanta. Detect via terraform plan, fix via apply.
+
+Q16: Terraform backend migrate kaise karte hain?
+A:
+
+terraform init -migrate-state -backend-config=...
+
+Old and new backend config specify
+
+Ensure locking and remote versioning
+
+Q17: Sensitive values Terraform me kaise handle karte hain?
+A:
+
+sensitive = true flag
+
+terraform.tfvars use
+
+Secrets manager (AWS SSM, Azure Key Vault) + data source
+
+🔒 Security and Best Practices
+Q18: Terraform me secrets ko kaise secure rakhen?
+A:
+
+.tfstate encrypt
+
+Secrets ko .tfvars me daal ke .gitignore karein
+
+Use secret managers with data sources
+
+Don't hardcode passwords in .tf files
+
+Q19: Terraform graph command ka kya use hai?
+A:
+terraform graph dependency graph generate karta hai DOT format me. Infra ke flow ko visualize karne me help karta hai.
+
+Q20: CI/CD me Terraform ko kaise use karte hain?
+A:
+
+Use terraform plan in pull request
+
+terraform apply in merge step (manual approval)
+
+Remote backend + workspace for multi-env (dev/stage/prod)

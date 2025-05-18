@@ -1,0 +1,101 @@
+Hello, my name is Skand Tripathi.
+I completed my Bachelor's degree in 2023 from PSIT, Kanpur, and have been working at Ericsson for the past 2.2 years (including internship). Out of this, I have 1.8 years of hands-on experience as a DevOps Engineer.
+
+My core strengths lie in:
+
+Infrastructure as Code (IaC) using Terraform
+
+CI/CD pipeline automation using Azure DevOps and GitHub Actions
+
+Strong hands-on with Azure Cloud, including provisioning AKS, Application Gateway, Key Vault, SQL, VMs, and Storage
+
+Scripting knowledge in Linux shell and Python for automation
+
+Basic working knowledge of Docker and Kubernetes for containerization and orchestration
+
+📌 Project: Real-Time Network Monitoring System – Telecom Use Case (Ericsson)
+At Ericsson, I worked on a large-scale, cloud-native real-time network monitoring system for a major European telecom operator focused on 5G infrastructure.
+The goal was to build a centralized dashboard to aggregate and visualize live data across thousands of network nodes, monitor metrics like signal strength, traffic load, node health, and provide proactive alerting using telemetry data.
+
+👥 Team Structure
+Since this was a large-scale enterprise solution, we had a cross-functional team:
+
+Front-end developers for the UI dashboard
+
+Back-end developers building microservices
+
+DevOps team (including myself) for automation and deployment
+
+Network engineers and cloud architects
+We followed a microservices-based architecture deployed over Azure Kubernetes Service (AKS).
+
+🔧 My Role as a DevOps Engineer
+I was involved in end-to-end infrastructure automation, CI/CD pipeline management, and system reliability tasks:
+
+🚀 Terraform & Infrastructure Automation (IaC)
+Created modular Terraform code for provisioning:
+
+Azure VNet, Subnets, NSGs, AKS, Key Vault, Storage Account, App Gateway, SQL DB, and Log Analytics
+
+Maintained remote backend state management using Azure Storage with state locking
+
+Enforced resource tagging, RBAC, naming conventions, and Azure hierarchy (Management Group → Subscription → Resource Group → Resource)
+
+🛠️ CI/CD Pipelines
+Built multi-stage CI/CD pipelines using Azure DevOps and GitHub Actions to automate:
+
+Code build, linting, testing, Docker image creation & push
+
+Terraform plan & apply stages with approval gates for Prod
+
+Enabled zero-downtime deployment for AKS services and health-probe-based rollouts
+
+🔒 Security & Monitoring
+Configured Application Gateway with WAF for secure ingress and SSL termination
+
+Integrated Azure Monitor, Log Analytics, and Application Insights for observability
+
+Created custom alerts and dashboards for node errors, pod restarts, and latency metrics
+
+🧩 Design Phase Contribution: HLD & LLD
+🧠 Client Requirement Gathering
+Participated in requirement workshops with client architects to understand:
+
+The number of environments needed (Dev, UAT, Prod)
+
+Desired Azure region strategy and DR setup
+
+Integration points with external APIs and enterprise monitoring tools
+
+🔷 High-Level Design (HLD)
+Proposed a cloud-native Azure architecture with:
+
+AKS + App Gateway + WAF for hosting and security
+
+Azure SQL + Blob Storage for data
+
+Log Analytics + App Insights for observability
+
+Defined overall flow of services, networking, role segregation, and monitoring scope
+
+🧩 Low-Level Design (LLD)
+Broke down HLD into Terraform modules:
+
+Developed environment-specific configurations with isolated resource groups
+
+Used GitHub Actions for infra deployments triggered via pull requests
+
+Setup pipelines for Terraform code validation, linting, and drift detection
+
+Designed AKS namespace strategy, pod limits, and YAML templates for microservices
+
+Defined backup strategy and log retention policies using Azure-native services
+
+✅ Impact & Outcome
+Reduced manual provisioning time by 70% using fully automated Terraform pipelines
+
+Improved deployment frequency and stability via CI/CD automation
+
+Ensured security compliance by integrating WAF, Key Vaults, and RBAC policies
+
+Enabled seamless environment scaling and monitoring, directly impacting uptime and SLA adherence
