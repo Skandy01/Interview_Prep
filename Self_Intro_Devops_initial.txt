@@ -1,101 +1,17 @@
-Hello, my name is Skand Tripathi.
-I completed my Bachelor's degree in 2023 from PSIT, Kanpur, and have been working at Ericsson for the past 2.2 years (including internship). Out of this, I have 1.8 years of hands-on experience as a DevOps Engineer.
+    Hello, thank you so much for giving me this opportunity! My name is [Your Name], and I graduated with a degree in [Your Degree, e.g., Computer Science] from [Your College Name] in [Your Graduation Year]. I’ve been working as a DevOps Engineer at Ericsson for the past 2.6 years., where I’ve had the chance to work on some exciting projects involving cloud infrastructure, automation, and deployment pipelines. My expertise lies in managing Azure-based infrastructure with Terraform, building CI/CD pipelines using Azure DevOps, and working with containerization tools like Docker and Kubernetes to ensure smooth and scalable deployments.
 
-My core strengths lie in:
+At Ericsson, my role revolves around automating infrastructure and streamlining the software delivery process. I’ve spent a lot of time using Terraform to provision Azure resources like virtual machines, virtual networks, application gateways, and databases, ensuring everything is defined as code for consistency and scalability. I’ve also built CI/CD pipelines with Azure Pipelines and GitHub Actions to automate application builds, testing, and deployments, integrating tools like SonarQube for code quality checks. On the containerization front, I’ve used Docker to package applications and deployed them to Kubernetes clusters, where I’ve written YAML manifests to manage deployments and services. I also handle monitoring and troubleshooting, using tools like Azure Monitor to keep systems running smoothly and resolve issues quickly by analyzing logs and collaborating with developers.
 
-Infrastructure as Code (IaC) using Terraform
+Let me share a recent project that highlights my work. At Ericsson, we worked on a **telecom network monitoring solution** for a client who needed real-time insights into their 5G network performance across multiple cell towers. The goal was to create a web portal and a mobile application to display key metrics like signal strength, latency, and bandwidth usage, while also generating alerts for any network anomalies, such as dropped connections or equipment failures.
 
-CI/CD pipeline automation using Azure DevOps and GitHub Actions
+The client had deployed IoT-enabled 5G equipment that continuously sent telemetry data to Azure cloud. Our job was to consume this data, process it, and present it in a user-friendly way on a web portal and mobile app. The application was a three-tier setup with a React-based frontend, a Python-based backend, and an Azure SQL database. We had a team of six frontend developers, five backend developers, and a small DevOps team, where I played a key role.
 
-Strong hands-on with Azure Cloud, including provisioning AKS, Application Gateway, Key Vault, SQL, VMs, and Storage
+As part of the DevOps team, my primary responsibility was to design the deployment architecture and set up CI/CD pipelines. For the infrastructure, I used Terraform to provision Azure resources, including an Application Gateway for secure traffic routing, virtual machines for hosting the application, and Azure SQL for the database. I organized the Terraform code into reusable modules for resources like VNets and subnets, and set up separate environments for dev, test, and prod to ensure isolated testing and production deployments. To make the infrastructure secure, I configured Key Vaults for storing sensitive data and enabled Web Application Firewall on the Application Gateway.
+z
+For the CI/CD pipelines, I used Azure DevOps to automate the entire process. We had two pipelines: one for infrastructure and one for the application. The infrastructure pipeline ran `tfsec` scans to check for security issues, followed by Terraform init, plan, and apply stages with manual approval gates for production. The application pipeline pulled code from GitHub, ran SonarQube for static code analysis, built the React frontend with npm and the Python backend with pip, and deployed the application to Azure VMs using SSH. For containerized deployments, I created Docker images for both the frontend and backend, stored them in Azure Container Registry, and deployed them to a Kubernetes cluster for scalability testing. I wrote Kubernetes YAML files to define deployments and services, and configured auto-scaling to handle traffic spikes.
 
-Scripting knowledge in Linux shell and Python for automation
+To ensure the system was reliable, I set up Azure Monitor to track application performance and network metrics, and used log analytics to troubleshoot issues like slow API responses or database connection errors. I worked closely with the developers to understand their requirements and ensure the infrastructure supported the application’s real-time data processing needs. The portal and mobile app successfully provided real-time network insights, and the alerts helped the client proactively address network issues, improving their 5G service reliability.
 
-Basic working knowledge of Docker and Kubernetes for containerization and orchestration
+This project really strengthened my skills in Terraform, Azure, Docker, and Kubernetes, and taught me how to balance automation, security, and collaboration in a fast-paced environment. While I’m most comfortable with Azure and Terraform, I’m excited to dive deeper into Kubernetes and advanced CI/CD practices to build even more efficient systems. I’m passionate about automating workflows, optimizing deployments, and contributing to innovative projects like this one.
 
-📌 Project: Real-Time Network Monitoring System – Telecom Use Case (Ericsson)
-At Ericsson, I worked on a large-scale, cloud-native real-time network monitoring system for a major European telecom operator focused on 5G infrastructure.
-The goal was to build a centralized dashboard to aggregate and visualize live data across thousands of network nodes, monitor metrics like signal strength, traffic load, node health, and provide proactive alerting using telemetry data.
-
-👥 Team Structure
-Since this was a large-scale enterprise solution, we had a cross-functional team:
-
-Front-end developers for the UI dashboard
-
-Back-end developers building microservices
-
-DevOps team (including myself) for automation and deployment
-
-Network engineers and cloud architects
-We followed a microservices-based architecture deployed over Azure Kubernetes Service (AKS).
-
-🔧 My Role as a DevOps Engineer
-I was involved in end-to-end infrastructure automation, CI/CD pipeline management, and system reliability tasks:
-
-🚀 Terraform & Infrastructure Automation (IaC)
-Created modular Terraform code for provisioning:
-
-Azure VNet, Subnets, NSGs, AKS, Key Vault, Storage Account, App Gateway, SQL DB, and Log Analytics
-
-Maintained remote backend state management using Azure Storage with state locking
-
-Enforced resource tagging, RBAC, naming conventions, and Azure hierarchy (Management Group → Subscription → Resource Group → Resource)
-
-🛠️ CI/CD Pipelines
-Built multi-stage CI/CD pipelines using Azure DevOps and GitHub Actions to automate:
-
-Code build, linting, testing, Docker image creation & push
-
-Terraform plan & apply stages with approval gates for Prod
-
-Enabled zero-downtime deployment for AKS services and health-probe-based rollouts
-
-🔒 Security & Monitoring
-Configured Application Gateway with WAF for secure ingress and SSL termination
-
-Integrated Azure Monitor, Log Analytics, and Application Insights for observability
-
-Created custom alerts and dashboards for node errors, pod restarts, and latency metrics
-
-🧩 Design Phase Contribution: HLD & LLD
-🧠 Client Requirement Gathering
-Participated in requirement workshops with client architects to understand:
-
-The number of environments needed (Dev, UAT, Prod)
-
-Desired Azure region strategy and DR setup
-
-Integration points with external APIs and enterprise monitoring tools
-
-🔷 High-Level Design (HLD)
-Proposed a cloud-native Azure architecture with:
-
-AKS + App Gateway + WAF for hosting and security
-
-Azure SQL + Blob Storage for data
-
-Log Analytics + App Insights for observability
-
-Defined overall flow of services, networking, role segregation, and monitoring scope
-
-🧩 Low-Level Design (LLD)
-Broke down HLD into Terraform modules:
-
-Developed environment-specific configurations with isolated resource groups
-
-Used GitHub Actions for infra deployments triggered via pull requests
-
-Setup pipelines for Terraform code validation, linting, and drift detection
-
-Designed AKS namespace strategy, pod limits, and YAML templates for microservices
-
-Defined backup strategy and log retention policies using Azure-native services
-
-✅ Impact & Outcome
-Reduced manual provisioning time by 70% using fully automated Terraform pipelines
-
-Improved deployment frequency and stability via CI/CD automation
-
-Ensured security compliance by integrating WAF, Key Vaults, and RBAC policies
-
-Enabled seamless environment scaling and monitoring, directly impacting uptime and SLA adherence
+Thank you again for this opportunity, and I’m happy to dive into any details or answer any questions you have!

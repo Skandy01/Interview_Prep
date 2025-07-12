@@ -1,45 +1,15 @@
-Self-Introduction 🌟
-Hello, my name is Skand Tripathi.
-I completed my Bachelor’s degree in 2023 from PSIT, Kanpur, and have been working at Ericsson for the past 2.2 years (including internship). Out of this, I have 1.8 years of hands-on experience as a DevOps Engineer.
 
-Currently, I am engaged with a major European telecom client, where I handle end-to-end DevOps processes — from infrastructure automation and cloud provisioning to CI/CD pipeline development and monitoring.
+Hello, thank you so much for having me today!
+My name is Skand, and I completed my Bachelor’s degree in Computer Science from PSIT, Kanpur, in 2023. For the past 2.6 years, I’ve been working as a DevOps Engineer, including my internship period. During this time, I’ve gained solid hands-on experience in cloud infrastructure, automation, and deployment processes.
 
-My core strengths include:
+Currently, I’m focused primarily on infrastructure automation on Azure using Terraform. I regularly write Terraform code to provision and manage Azure resources like virtual networks, subnets, VMs, databases, and application gateways. I enjoy leveraging Infrastructure as Code to maintain consistency across development, testing, and production environments, using reusable Terraform modules and remote backend state management.
 
-Infrastructure as Code (IaC) using Terraform
+Beyond infrastructure, I’ve worked extensively on CI/CD pipeline automation, primarily using Azure DevOps. I’ve built pipelines that integrate with GitHub, run SonarQube-based code quality checks, build applications, and deploy them directly to Azure VMs or Kubernetes clusters. For containerization, I’ve used Docker to package both Python backends and React frontends, pushing the images to Azure Container Registry and deploying them to AKS for scalable delivery.
 
-CI/CD automation via GitHub Actions and Azure DevOps
+On the Kubernetes front, I’ve been involved in setting up clusters, managing YAML configurations, and defining deployments, services, and ingress resources. I’ve also experimented with pod scaling to handle traffic fluctuations, and I’m currently expanding my expertise into Helm charts and advanced orchestration strategies.
 
-Strong command over Azure CLI, PowerShell, and Git
+Monitoring and troubleshooting are part of my daily responsibilities. I use Azure Monitor, Log Analytics, and Application Insights to track performance, investigate deployment issues, and ensure application stability. I enjoy collaborating closely with developers to align infrastructure with their requirements and support seamless application delivery.
 
-I’ve worked on optimizing deployment workflows, enhancing cloud infrastructure scalability, and enforcing DevOps best practices to ensure high system availability and performance.
+What excites me most about DevOps is the ability to automate repetitive tasks, enhance team productivity, and build scalable, secure, and efficient systems. I’m continuously learning and currently deepening my knowledge in Kubernetes and modern DevOps practices.
 
-If you'd like, I’d be happy to walk you through my current project and explain my responsibilities in more detail.
-
-1. Real-Time Network Monitoring System – Telecom Use Case
-Project Overview:
-At Ericsson, we developed a real-time network monitoring and management system for a leading European telecom operator, focused on enhancing the reliability and scalability of 5G infrastructure. The goal was to build a centralized cloud-native dashboard that aggregates live data from over 3,000+ network nodes, tracking key metrics such as signal strength, user traffic, and equipment health, while triggering automated alerts for early issue detection and resolution.
-
-Team Structure:
-This large-scale project was executed by a cross-functional team comprising front-end and back-end developers, network engineers, QA specialists, and DevOps engineers. The system utilized a microservices-based architecture to enable high availability, scalability, and modular development of services for data ingestion, analytics, and visualization.
-
-My Role – DevOps Engineer:
-As part of the DevOps team, I was responsible for end-to-end infrastructure automation and deployment workflows, including:
-
-Infrastructure Provisioning:
-Automated deployment of scalable Azure infrastructure using Terraform, including VNet, Subnets, Azure Key Vault, VMs, Storage Accounts, and Azure SQL Databases.
-
-CI/CD Implementation:
-Designed and maintained Azure DevOps pipelines and GitHub Actions workflows to automate build, test, and deployment processes for over 20+ microservices, reducing release times by ~40%.
-
-Version Control & Collaboration:
-Used Git and GitHub for source control and code reviews, enabling seamless team collaboration and traceability across the development lifecycle.
-
-Security & Traffic Management:
-Configured Azure Application Gateway with Web Application Firewall (WAF) for secure ingress traffic management, load balancing, and SSL certificate-based encryption.
-
-Monitoring & Incident Response:
-Deployed comprehensive monitoring using Azure Monitor, Log Analytics, and Application Insights, resulting in a 30% improvement in incident detection time and significantly faster root cause analysis.
-
-Performance Optimization & Support:
-Worked closely with developers and network teams to debug environment issues, optimize container performance, and establish DevOps best practices, which improved system uptime to 99.95%+.
+I’m really looking forward to bringing my skills in Terraform, Azure, CI/CD, Docker, and Kubernetes to your team and contributing meaningfully to impactful projects.
